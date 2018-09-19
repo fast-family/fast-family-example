@@ -22,9 +22,30 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+
+		<springfox.swagger2.verion>2.7.0</springfox.swagger2.verion>
+		<springfox.swagger.ui.version>2.7.0</springfox.swagger.ui.version>
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox.swagger2.verion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox.swagger.ui.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.zs.lqh</groupId>
+			<artifactId>spring-mvc-expansion</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.github.zs.lqh</groupId>
