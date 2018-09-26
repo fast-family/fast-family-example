@@ -6,3 +6,18 @@ spring:
     password: root
 logging:
   level: debug
+
+
+mapper:
+  notEmpty: true
+
+fast:
+  family:
+    swagger2:
+      restapi:
+        backPackage: "com.fast.family.example"
+      apiinfo:
+        title: "fast-family swagger构建api文档"
+        description: "简单优雅的restful风格"
+        version: "1.0"
+

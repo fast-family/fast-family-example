@@ -3,8 +3,8 @@ package com.fast.family.example.service.impl;
 import com.fast.family.example.entity.UserEntity;
 import com.fast.family.example.mapper.UserMapper;
 import com.fast.family.example.service.UserService;
-import com.github.zs.lqh.mapper.BaseMapper;
-import com.github.zs.lqh.springmvc.common.service.impl.GenericServiceImpl;
+import com.fast.family.mvc.generic.mapper.GenericMapper;
+import com.fast.family.mvc.generic.service.impl.GenericServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +20,9 @@ public class UserServiceImpl extends GenericServiceImpl<UserEntity,Long>
     @Autowired
     private UserMapper userMapper;
 
+
     @Override
-    public BaseMapper<UserEntity> getMapper() {
-        return userMapper;
+    public GenericMapper<UserEntity, Long> getMapper() {
+        return this.userMapper;
     }
 }
