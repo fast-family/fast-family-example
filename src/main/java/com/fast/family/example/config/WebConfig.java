@@ -1,6 +1,7 @@
 package com.fast.family.example.config;
 
-import com.fast.family.commons.filter.AccessLogFilter;
+
+import com.fast.family.mvc.filter.AccessLogFilter;
 import com.fast.family.security.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

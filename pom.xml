@@ -76,9 +76,40 @@
 		</dependency>
 
 		<dependency>
-			<groupId>fast.family</groupId>
-			<artifactId>fast-family</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>com.github.fast-family</groupId>
+			<artifactId>fast-family-utils</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.fast-family</groupId>
+			<artifactId>fast-family-utils</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.fast-family</groupId>
+			<artifactId>fast-family-commons</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.fast-family</groupId>
+			<artifactId>fast-family-mvc</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.fast-family</groupId>
+			<artifactId>fast-family-security</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.fast-family</groupId>
+			<artifactId>fast-family-swagger</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.fast-family</groupId>
+			<artifactId>fast-family-tomcat</artifactId>
+			<version>0.1.0</version>
 		</dependency>
 	</dependencies>
 
