@@ -4,6 +4,7 @@ import com.fast.family.security.SecurityProperties;
 import com.fast.family.security.ip.CustomIpAuthencationProvider;
 import com.fast.family.security.jwt.JWTConfigurer;
 import com.fast.family.security.jwt.JWTHelper;
+import com.fast.family.security.mobile.SmsCodeAuthenticationConfigure;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -97,7 +98,14 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
             .antMatchers("/swagger-resources/configuration/ui").permitAll()
         .and()
             .userDetailsService(userDetailsService)
-            .apply(jwtConfigurer());
+            .apply(jwtConfigurer())
+        .and()
+            .apply(smsCodeAuthenticationConfigure());
+    }
+
+
+    private SmsCodeAuthenticationConfigure smsCodeAuthenticationConfigure(){
+        return new SmsCodeAuthenticationConfigure();
     }
 
     private JWTConfigurer jwtConfigurer(){
