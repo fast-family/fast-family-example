@@ -1,0 +1,34 @@
+package com.fast.family.mvc.example.service.impl;
+
+
+import com.fast.family.mvc.generic.mapper.GenericMapper;
+import com.fast.family.mvc.generic.service.impl.GenericServiceImpl;
+import com.fast.family.mvc.example.entity.SysUser;
+import com.fast.family.mvc.example.mapper.SysUserMapper;
+import com.fast.family.mvc.example.service.SysUserService;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+/**
+* <p>
+* 描述: 用户信息业务实现类
+* <p>
+*
+* @created 2018-10-06 14:17:30
+*/
+@Service
+@Slf4j
+public class SysUserServiceImpl extends GenericServiceImpl<SysUser,Long> implements SysUserService{
+
+    @Autowired
+    private SysUserMapper sysuserMapper;
+
+
+    @Override
+    public GenericMapper<SysUser, Long> getMapper() {
+        return sysuserMapper;
+    }
+}

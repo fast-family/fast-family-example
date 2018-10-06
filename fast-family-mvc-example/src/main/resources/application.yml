@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    password: root
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fast-family-example?useUnicode=true&characterEncoding=utf8
+fast:
+  family:
+    swagger2:
+      restapi:
+        back-package: com.fast.family.mvc.example
+      apiinfo:
+        version: 1.0
+        title: fast-family-swagger构建restful api
+        description: 欢迎关注fast-family快速开发框架
+        terms-of-service-url: https://github.com/fast-family/fast-family-master
+        contact-email: 616394599@qq.com
+        contact-name: zs
+
+
+

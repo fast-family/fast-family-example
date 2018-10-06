@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fast.family.example</groupId>
-	<artifactId>fast-family-example</artifactId>
+	<groupId>fast.family.mvc.example</groupId>
+	<artifactId>fast-family-mvc-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>fast-family-example</name>
+	<name>fast-family-mvc-example</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -22,30 +22,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-
-		<springfox.swagger2.verion>2.7.0</springfox.swagger2.verion>
-		<springfox.swagger.ui.version>2.7.0</springfox.swagger.ui.version>
 	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>${springfox.swagger2.verion}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>${springfox.swagger.ui.version}</version>
-		</dependency>
-
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -54,8 +37,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.44</version>
 		</dependency>
 
 		<dependency>
@@ -64,17 +48,11 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-utils</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-commons</artifactId>
-			<version>0.1.0</version>
-		</dependency>
+        <dependency>
+            <groupId>com.github.fast-family</groupId>
+            <artifactId>fast-family-generator</artifactId>
+            <version>0.1.0</version>
+        </dependency>
 
 		<dependency>
 			<groupId>com.github.fast-family</groupId>
@@ -82,23 +60,6 @@
 			<version>0.1.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-security</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-generator</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-datasource</artifactId>
-			<version>0.1.0</version>
-		</dependency>
 	</dependencies>
 
 	<build>

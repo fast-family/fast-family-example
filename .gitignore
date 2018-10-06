@@ -25,3 +25,6 @@ hs_err_pid*
 .mvn/wrapper/maven-wrapper.properties
 fast-family-example.iml
 target/
+fast-family-mvc-example/.mvn/
+fast-family-security-example/.mvn/
+fast-family-datasource-example/.mvn/
