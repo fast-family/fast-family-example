@@ -17,10 +17,10 @@ import javax.validation.Valid;
 * 描述: 用户信息控制器
 * <p>
 *
-* @created 2018-10-06 14:17:29
+* @created 2018-10-07 10:57:49
 */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("user")
 @Slf4j
 @Api(tags = "用户信息接口")
 public class SysUserController extends GenericController<SysUser,Long>{

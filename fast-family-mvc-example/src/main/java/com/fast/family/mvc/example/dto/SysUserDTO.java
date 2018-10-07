@@ -11,7 +11,7 @@ import com.fast.family.mvc.generic.service.domain.AbstractPersistableBusinessObj
 * 描述: 用户信息Dto实体
 * <p>
 *
-* @created 2018-10-06 14:17:30
+* @created 2018-10-07 10:57:50
 */
 public class SysUserDTO extends AbstractPersistableBusinessObjectAdapter<SysUser>{
 
@@ -21,12 +21,12 @@ public class SysUserDTO extends AbstractPersistableBusinessObjectAdapter<SysUser
     }
 
     @Override
-    protected void customizeConvert(SysUser sysuser) {
+    protected void customizeConvert(SysUser sysUser) {
 
     }
 
     @Override
-    protected void customizeFill(SysUser sysuser) {
+    protected void customizeFill(SysUser sysUser) {
 
     }
 }

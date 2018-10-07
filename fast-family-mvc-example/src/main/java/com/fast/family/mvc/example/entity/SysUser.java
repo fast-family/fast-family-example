@@ -21,7 +21,7 @@ import javax.persistence.Table;
 * <p>
 * 描述: 用户信息实体
 * <p>
-* @created 2018-10-06 14:17:30
+* @created 2018-10-07 10:57:50
 */
 @Builder
 @Data
@@ -33,13 +33,19 @@ import javax.persistence.Table;
 public class SysUser extends GenericEntity<Long> {
 
 
+
+
     @Column(name = "user_name")
-    @ApiModelProperty(required = true, dataType = "String", name = "用户名")
+    @ApiModelProperty(required = true, dataType = "String", name = "")
     private String userName;
 
 
     @Column(name = "password")
-    @ApiModelProperty(required = true, dataType = "String", name = "密码")
+    @ApiModelProperty(required = true, dataType = "String", name = "")
     private String password;
+
+
+
+
 
 }

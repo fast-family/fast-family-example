@@ -8,7 +8,7 @@ import com.fast.family.mvc.example.entity.SysUser;
 * 描述: 用户信息Mapper接口
 * <p>
 *
-* @created 2018-10-06 14:17:30
+* @created 2018-10-07 10:57:50
 */
 public interface SysUserMapper extends GenericMapper<SysUser,Long> {
 

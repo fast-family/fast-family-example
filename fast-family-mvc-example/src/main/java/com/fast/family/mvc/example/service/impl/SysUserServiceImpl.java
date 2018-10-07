@@ -17,18 +17,18 @@ import org.springframework.stereotype.Service;
 * 描述: 用户信息业务实现类
 * <p>
 *
-* @created 2018-10-06 14:17:30
+* @created 2018-10-07 10:57:49
 */
 @Service
 @Slf4j
 public class SysUserServiceImpl extends GenericServiceImpl<SysUser,Long> implements SysUserService{
 
     @Autowired
-    private SysUserMapper sysuserMapper;
+    private SysUserMapper sysUserMapper;
 
 
     @Override
     public GenericMapper<SysUser, Long> getMapper() {
-        return sysuserMapper;
+        return sysUserMapper;
     }
 }
