@@ -1,6 +1,7 @@
 package com.fast.family.datasource.example;
 
 import com.fast.family.datasource.example.mapper.UserDao;
+import com.fast.family.datasource.example.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,12 @@ public class FastFamilyDatasourceExampleApplicationTests {
 	@Autowired
 	private UserDao userDao;
 
+	@Autowired
+	private UserService userService;
+
 	@Test
 	public void contextLoads() {
-		System.out.println("查询数据大小："+userDao.selectAll().size());
+		System.out.println("查询数据大小："+userService.selectAll().size());
 
 	}
 
