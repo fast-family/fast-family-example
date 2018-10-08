@@ -20,7 +20,8 @@ public class FastFamilyDatasourceExampleApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		System.out.println("查询数据大小："+userService.selectAll().size());
+		System.out.println("查询数据大小："+userService.selectAlldb1().size());
+		System.out.println("查询数据大小："+userService.selectAlldb2().size());
 
 	}
 
