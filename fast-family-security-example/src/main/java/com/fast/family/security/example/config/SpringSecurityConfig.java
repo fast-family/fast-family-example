@@ -16,6 +16,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.web.filter.CorsFilter;
 
 /**
  * @author 张顺
@@ -32,43 +34,26 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
     @Autowired
     private SecurityProperties securityProperties;
 
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        super.configure(web);
-    }
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        super.configure(http);
-    }
-//
-//    /**
-//     * 配置验证码存储方式
-//     * @return
-//     */
-//    @Bean
-//    public ValidateCodeRepository validateCodeRepository(){
-//        return new ImMemoryValidateCodeRepository();
-//    }
-//
-//    /**
-//     * 图片验证码
-//     * @return
-//     */
-//    @Bean
-//    public ValidateCodeGenerator imageValidateCodeGenerator(){
-//        return new ImageValidateCodeGenerator();
-//    }
-//
-//    /**
-//     * 短信验证码
-//     * @return
-//     */
-//    @Bean
-//    public ValidateCodeGenerator smsValidateCodeGenerator(){
-//        return new SmsValidateCodeGenerator();
-//    }
+        http
+            .csrf()
+            .disable()
+            .headers()
+            .frameOptions()
+            .disable()
+        .and()
+            .sessionManagement()
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and()
+            .authorizeRequests()
+            .antMatchers("/index").permitAll()
+        .and()
+            .apply(jwtConfigurer());
 
+    }
 
     /**
      * jwt配置

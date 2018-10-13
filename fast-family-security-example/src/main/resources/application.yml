@@ -2,6 +2,12 @@ security:
   basic:
     enabled: true
 
+spring:
+  datasource:
+    password: root
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fast-family-example?useUnicode=true&characterEncoding=utf8
 
 fast:
   family:
@@ -12,3 +18,7 @@ fast:
           repository: imMemory
 #          image: true
           sms: true
+
+logging:
+  level:
+    org.springframework.security: debug
