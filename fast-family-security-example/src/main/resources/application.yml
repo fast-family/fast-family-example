@@ -1,0 +1,14 @@
+security:
+  basic:
+    enabled: true
+
+
+fast:
+  family:
+    security:
+      enabled: true
+      validate:
+        code:
+          repository: imMemory
+#          image: true
+          sms: true

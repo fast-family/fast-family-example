@@ -28,3 +28,6 @@ target/
 fast-family-mvc-example/.mvn/
 fast-family-security-example/.mvn/
 fast-family-datasource-example/.mvn/
+fast-family-datasource-example/transaction-logs/
+transaction-logs/tmlog.lck
+transaction-logs/169.254.156.20.tm1.epoch
