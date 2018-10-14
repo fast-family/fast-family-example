@@ -1,23 +1,23 @@
 package com.fast.family.security.example.config;
 
 import com.fast.family.security.SecurityProperties;
+import com.fast.family.security.example.service.impl.UserDetailsServiceImpl;
 import com.fast.family.security.jwt.JWTConfigurer;
 import com.fast.family.security.jwt.JWTHelper;
 import com.fast.family.security.mobile.SmsCodeAuthenticationConfigurer;
-import com.fast.family.security.validate.code.ImMemoryValidateCodeRepository;
-import com.fast.family.security.validate.code.ValidateCodeGenerator;
-import com.fast.family.security.validate.code.ValidateCodeRepository;
-import com.fast.family.security.validate.code.image.ImageValidateCodeGenerator;
-import com.fast.family.security.validate.code.sms.SmsValidateCodeGenerator;
+import com.fast.family.security.validate.code.sms.SmsValidateCodeConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.web.filter.CorsFilter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @author 张顺
@@ -34,6 +34,20 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
     @Autowired
     private SecurityProperties securityProperties;
 
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Autowired
+    private AuthenticationManagerBuilder authenticationManagerBuilder;
+
+
+
+
+    @Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 
 
     @Override
@@ -49,10 +63,23 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and()
             .authorizeRequests()
-            .antMatchers("/index").permitAll()
+            .antMatchers("/system/index").permitAll()
         .and()
-            .apply(jwtConfigurer());
+            .apply(jwtConfigurer())
+        .and()
+            .apply(smsCodeAuthenticationConfigurer())
+        .and()
+            .apply(smsValidateCodeConfigurer());
 
+    }
+
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.userDetailsService(userDetailsService);
+//    }
+
+    private SmsValidateCodeConfigurer smsValidateCodeConfigurer(){
+        return new SmsValidateCodeConfigurer();
     }
 
     /**
@@ -68,6 +95,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
      * @return
      */
     private SmsCodeAuthenticationConfigurer smsCodeAuthenticationConfigurer(){
-        return new SmsCodeAuthenticationConfigurer();
+        return new SmsCodeAuthenticationConfigurer(userDetailsService);
     }
 }
