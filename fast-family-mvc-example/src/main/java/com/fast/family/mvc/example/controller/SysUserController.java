@@ -1,5 +1,7 @@
 package com.fast.family.mvc.example.controller;
 
+import com.fast.family.log.LogConstant;
+import com.fast.family.log.annotation.LogAnnotation;
 import com.fast.family.mvc.generic.controller.GenericController;
 import com.fast.family.mvc.generic.service.GenericService;
 import com.fast.family.mvc.example.entity.SysUser;
@@ -27,6 +29,12 @@ public class SysUserController extends GenericController<SysUser,Long>{
 
     @Autowired
     private SysUserService sysUserService;
+
+    @LogAnnotation(methodName = "helloword",methodType = LogConstant.SELECT,desc = "helloword")
+    @GetMapping("/helloword")
+    public String helloword(String name){
+        return "helloword";
+    }
 
 
     @Override

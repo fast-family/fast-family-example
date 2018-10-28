@@ -30,11 +30,6 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>${springfox.swagger2.verion}</version>
@@ -64,42 +59,13 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-utils</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-commons</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-mvc</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-security</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-generator</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.fast-family</groupId>
-			<artifactId>fast-family-datasource</artifactId>
-			<version>0.1.0</version>
-		</dependency>
 	</dependencies>
+
+	<modules>
+		<module>fast-family-datasource-example</module>
+		<module>fast-family-mvc-example</module>
+		<module>fast-family-security-example</module>
+	</modules>
 
 	<build>
 		<plugins>

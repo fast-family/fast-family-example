@@ -41,8 +41,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
     private AuthenticationManagerBuilder authenticationManagerBuilder;
 
 
-
-
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -73,10 +71,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 
     }
 
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService);
-//    }
 
     private SmsValidateCodeConfigurer smsValidateCodeConfigurer(){
         return new SmsValidateCodeConfigurer();

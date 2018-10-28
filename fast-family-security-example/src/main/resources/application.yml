@@ -13,10 +13,14 @@ fast:
   family:
     security:
       enabled: true
+      jwt:
+        authoritiesKey: "fast-family-auth-key"
+        secret: "fast-family-token-secret";
+        tokenValidityInseconds: 1800
+        tokenValidityInSecondsForRememberMe: 2592000
       validate:
         code:
           repository: imMemory
-#          image: true
           sms: true
 
 logging:

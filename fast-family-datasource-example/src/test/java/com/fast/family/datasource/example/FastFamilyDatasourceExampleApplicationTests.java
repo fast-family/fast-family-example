@@ -13,17 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootTest
 public class FastFamilyDatasourceExampleApplicationTests {
 
-	@Autowired
-	private UserDao userDao;
 
 	@Autowired
 	private UserService userService;
 
-	@Test
-	public void contextLoads() {
-		System.out.println("查询数据大小："+userService.selectAlldb1().size());
-		System.out.println("查询数据大小："+userService.selectAlldb2().size());
-	}
 
 
 	@Transactional

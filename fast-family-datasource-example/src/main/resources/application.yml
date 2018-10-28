@@ -1,6 +1,6 @@
 fast:
   family:
-    type: com.alibaba.druid.pool.DruidDataSource
+    type: com.alibaba.druid.pool.xa.DruidXADataSource
     datasource:
       master:
         druid:

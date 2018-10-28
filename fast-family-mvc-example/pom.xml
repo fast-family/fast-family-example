@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fast.family.mvc.example</groupId>
+
 	<artifactId>fast-family-mvc-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -12,9 +12,9 @@
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.16.RELEASE</version>
+		<groupId>fast.family.example</groupId>
+		<artifactId>fast-family-example</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -57,6 +57,12 @@
 		<dependency>
 			<groupId>com.github.fast-family</groupId>
 			<artifactId>fast-family-mvc</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.fast-family</groupId>
+			<artifactId>fast-family-log</artifactId>
 			<version>0.1.0</version>
 		</dependency>
 
