@@ -17,8 +17,12 @@ public class FastFamilyMvcExampleApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		SysUser sysUser = sysUserService.selectById(Long.valueOf("1043353933620113408")).get();
-		System.out.println("查询信息:"+sysUser.getUserName());
+		SysUser user = new SysUser();
+		user.setPassword("123123222222222");
+		user.setUserName("12313");
+		sysUserService.insert(user);
+//		SysUser sysUser = sysUserService.selectById(Long.valueOf("1043353933620113408")).get();
+//		System.out.println("查询信息:"+sysUser.getUserName());
 	}
 
 }
